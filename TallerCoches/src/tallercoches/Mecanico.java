@@ -1,6 +1,6 @@
 package tallercoches;
 
-public class Mecanico {
+public class Mecanico implements Comparable{
 	private ESPECIALIDAD especialidad;
 	private int codigo;
 	private String nombre;
@@ -62,6 +62,13 @@ public class Mecanico {
 		return "Mecanico [especialidad=" + especialidad + ", codigo=" + codigo + ", nombre=" + nombre + ", libre="
 				+ libre + "]\n"+
 				"Vehiculo: "+vehiculo;
+	}
+
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return nombre.compareTo(((Mecanico)o).nombre);
 	}
 	
 	
