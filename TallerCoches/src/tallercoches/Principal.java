@@ -6,6 +6,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("Taller de vehiculos");
 		String menu="1-Recepcion Vehiculo\n"+
 				"2-Terminación de una recepción\n"+
 				"3-Entrega de vehiculo repadados\n"+
