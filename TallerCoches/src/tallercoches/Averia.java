@@ -1,6 +1,6 @@
 package tallercoches;
 
-public class Averia {
+public class Averia implements Comparable<Averia>{
 	
 	private int codigo;
 	private static int contador=0;
@@ -36,6 +36,15 @@ public class Averia {
 	@Override
 	public String toString() {
 		return "Averia [codigo=" + codigo + ", descripcion=" + descripcion + ", coste=" + coste + "]";
+	}
+
+	@Override
+	public int compareTo(Averia o) {
+		// TODO Auto-generated method stub
+		if (descripcion.compareTo(o.descripcion)==0) {
+			return coste-o.coste;
+		}
+		return descripcion.compareTo(o.descripcion); 
 	}
 	
 	
